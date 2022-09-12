@@ -1,0 +1,391 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Work Term Report</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My work term reprot for my eight month co-op at Phenom duing 2021.">
+    <meta name="author" content="Mac">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    // add our menu functionality on load
+    window.addEventListener("load", () => {
+        const toggleMenu = () => {
+            // if we're showing menu, make it toggleable
+            let menuToggle = document.getElementById('menu-toggle');
+            if (window.getComputedStyle(menuToggle).display !== "none") {
+                let menu = document.getElementById("menu");
+                if (window.getComputedStyle(menu).display === "none") {
+                    menu.style.display = 'inline-block'
+                } else {
+                    menu.style.display = 'none'
+                }
+            }
+        };
+
+        let menuToggle = document.getElementById('menu-toggle');
+        let menu = document.getElementById("menu");
+        let children = menu.childNodes;
+        // make the menu options close menu on click
+        for (let i = 0; i < children.length; i++) {
+            if (children[i].nodeName !== "#text") {
+                let link = children[i].childNodes[0];
+                link.addEventListener("click", toggleMenu)
+            }
+        }
+        menuToggle.addEventListener("click", toggleMenu)
+    })
+
+    window.addEventListener("resize", () => {
+        let menuToggle = document.getElementById('menu-toggle');
+        let menu = document.getElementById("menu");
+        menu.style.display = ""
+        menu.style.boder = ""
+        menuToggle.style.display = ""
+    })
+</script>
+
+<body>
+    <header>
+        <img id="menu-toggle" src="media/menu-icon/2x/outline_menu_white_48dp.png" alt="menu button">
+        <ul id="menu">
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#first-week">First Week</a></li>
+            <li><a href="#my-job">My Job</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+            <li><a href="#summary">Summary</a></li>
+        </ul>
+    </header>
+    <a id="intro"></a>
+    <div id="header-space"></div>
+    <div id="main-text">
+        <section>
+            <div id="title">
+                <h1>Spring 2022 Work Term Report</h1>
+                <picture>
+                    <img id="RB-logo" src="media/RBLogoSmall.jpg" alt="Relevant Bits logo">
+                </picture>
+            </div>
+            <a id="intro"></a>
+            <p>
+                &emsp;&emsp;Dear reader, I hope that after viewing this you can come to 
+                appreciate all that I have accomplished and experienced while working as a web developer at 
+                Relevant Bits. In this article we will explore the goals that I had set for this work term, 
+                and reflect upon them. I will also attempt to summarize all of the fun and exciting things that 
+                I’ve been lucky enough to work on over the past four months. 
+            </p>
+            <h2>
+                &lt;About-Relevant-Bits/&gt;
+            </h2>
+            <p>&emsp;&emsp;Relevant Bits is a small, tightly knit group of bright-minded individuals 
+                seeking to provide top-notch solutions to a wide range of customers, from small 
+                single page designs to entire end to end web applications for large companies, 
+                Relevant bits does it all. The team is distributed around the globe with around 
+                half of the team in North America and the rest are scattered around Europe. The 
+                team has a few projects on the go at <a id="goals"></a>the moment but the most notable of them is Context. 
+                Context will be Relevant Bits’ first in house application that they’re putting on the market. 
+                It’s an app for the Shopify ecommerce platform which will allow store owners to create 
+                dynamic customizable marketing content for their stores based on a list of predetermined rules. 
+                This was what I spent my time working on during the summer and I can’t wait to see it go live 
+                in the next couple of weeks as I continue my work at Relevant Bits. 
+            </p>
+        </section>
+        <section>
+            <h2>
+                &lt;Goals/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;Now that I’ve introduced Relevant Bits, let’s talk about some of the goals I had 
+                set for the term. Having already worked eight months at Phenom prior to joining Relevant Bits, 
+                I found it easier to set more appropriate goals now that I had a little bit of experience under 
+                my belt. The c goals for this semester were more aimed towards soft skills rather than any 
+                specific technologies or technical techniques. Having said that, if I had set any goals aimed 
+                towards learning and experimenting with new technology, I would have knocked them out of the
+                 park! I got to work with so much new stuff this term, it was incredible. I’ll get more into 
+                 that in the next section though, here are my goals which I had set at the start of the work term. 
+                to me.
+            </p>
+            <ul>
+                <li>
+                    Become better at conversing potential ideas to my seniors. 
+                    I knew Relevant Bits was a fairly small company coming into the 
+                    work term, so I felt like there was more potential to really make a big 
+                    positive difference if I could come up with some good ideas and solutions, 
+                    I just needed to make sure I was heard! Also part of this goal was generally 
+                    trying to become more confident during meetings and standups, which would in 
+                    turn help make me a better speaker. 
+                    <br />
+
+                </li>
+                <li>
+                    Become more comfortable working with other people. I know this one seems a 
+                    little vague but the pandemic definitely stole some of my social skills and I 
+                    wasn’t as confident as I wanted to be regarding working alongside teammates. 
+                    Along with the social aspect, reading other people’s code, pair-programming 
+                    and other technically involved social events can be difficult. My goal here 
+                    was to become more comfortable doing these things. 
+                    <br />
+
+                </li>
+                <li>
+                    Continued creative problem solving and thinking. This was a goal I 
+                    had during my time at Phenom but I really think it’s a critical part 
+                    of my toolbox, so I decided to extend my goal. Creative problem solving 
+                    can be difficult, but over the last two years I’ve slowly built on this skill 
+                    and it’s proven to be super useful time and time again. My goal here specifically 
+                    was to produce good solutions while continuing to think outside of the box and 
+                    explore many possible options and become better at evaluating and acting on the best choice.
+                    <br />
+
+                </li>
+            </ul>           
+            <p>
+                &emsp;&emsp;These were only my larger and more general goals for the work term. 
+                As the weeks went on, I found myself setting many smaller goals and checking in 
+                and evaluating my progress throughout the work term. Oftentimes I would be tasked 
+                with learning some new technology and would set myself a goal with some degree of 
+                mastery in mind as well as a date. This helped me learn stuff more efficiently, 
+                as I was able to create a pace of learning which I could use to guide myself. 
+                Please see the reflections section <a id="first-week"></a>to see how I did with the goals mentioned above. 
+            </p>
+        </section>
+        <p>
+            &emsp;&emsp;I suppose this is the bit where I get to tell you about all of the awesome stuff 
+            I got to do over the work term! This term was filled with a ridiculous amount of 
+            learning and I got to try out so many new technologies. In this section I’ll talk 
+            a little bit about the technologies I learned, the struggles I faced, and the contributions I made. 
+        </p>
+        <section> 
+            <h2>
+                &lt;The-First-Week/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;To begin, I’ll briefly wind us back to the very beginning 
+                of the term so that I can tell a short story of how my first week at 
+                Relevant Bits went. The first day started off the same as many other remote 
+                internships probably do, by logging in to Slack, or whatever communication 
+                app your company might use. I was greeted by a message from every single person 
+                inviting me to the team. This was great, everyone was super friendly, the morning standup went 
+                well and I was on my way to trying to get my local environment set up with 
+                the project that I had been assigned to, Context. As I mentioned earlier, 
+                Context is the company’s first application that they’re going to be putting 
+                on the market and it’s designed as an application for the Shopify ecommerce 
+                marketplace. This app would allow store owners to create dynamic customizable 
+                marketing content for their stores based on a list of predetermined rules. 
+                That sounds cool right, so I was very excited to get to work on it. Unfortunately, 
+                I could not, for the life of me, get the local setup running on my desktop. Over 
+                the course of the week we tried just about everything to get this thing going. We 
+                tried different Node versions, different packages, different security settings, 
+                WSL and a couple of other things that didn’t pan out. It was tough, and I was starting
+                 to feel pretty defeated after the first three or four days. But I just kept trying one 
+                 thing after the other because I wanted to make a point to my boss that I was committed 
+                 and could keep my head up, even when nothing seemed to be going right. 
+            </p>
+            <p>
+                &emsp;&emsp;At some point my boss also got fed up with nothing working and decided 
+                to invest a little bit of time and money into Github Codespaces. Codespaces are super cool, 
+                they’re a browser based instance of VScode running off of a docker image with whatever 
+                config you want. So it was super easy to set up a basic Linux based machine with all 
+                the right versions of what we needed and boom, we were in business. I was finally able 
+                to start playing with the project, but <a id="my-job"></a>I had a week's worth of catching up to do since 
+                we spent so much time messing around with my local environment. So, I did what any good 
+                intern would do and proceeded to stay up for 48 hours straight over the weekend and read 
+                through every single piece of the code base. Just kidding, I didn’t do that. I did however 
+                manage to learn a lot of stuff really quickly which helped me recover from the first week. 
+                Oh also, Relevant Bits somehow also knew I had a soft spot for company swag. So they sent me this 
+                nifty little care package pictured below.
+            </p>
+            <picture class="rect-img-container">
+                <img srcset="media/CarePackageSmall.jpg 700w," src="media/CarePackage.jpg" alt="Company swag">
+            </picture>
+        </section>
+        <section>
+            <h2>
+                &lt;My-Job/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;I was amazed by all of the tech that Shopify offers with its 
+                API and other developer tools. Alongside all of the neat Shopify stuff, 
+                I got to learn Koa which is just a lightweight version of Express. 
+                I was fortunate that everything was in ES6 TypeScript, since I had spent
+                 my last eight months working with React and JavaScript, all of the code 
+                 was fairly easy to read. In particular I had never really worked with any
+                  backend code, so all of the server side tech was fascinating to me. 
+                <br />
+                <br />
+                &emsp;&emsp;The project I was assigned to was already partially developed 
+                but had been put aside for more than a year and was just now being revived 
+                in the hope that we could get it to the Shopify app store by the end of 
+                the semester. My biggest contribution to the project and the company by 
+                far was the development of the app’s analytics system. The app’s goal in 
+                short was to allow store owners to create customized, targeted material 
+                on their Shopify store based on visitor’s information and a set of  “rules” 
+                that the store owner would create in the app. This is relatively useless if 
+                you have no way of determining the effectiveness of your customized marketing 
+                material and rules, so we needed a way to track and display this data in a 
+                meaningful way to the user. After the first month, and lots of discussion, 
+                the analytics dashboard and tracking became my project. 
+                <br />
+                <br />
+                &emsp;&emsp;My first challenge was trying to understand the code that 
+                was already in place, the code that was there seemed somewhat complete 
+                but it was still seriously broken and used some outdated tech. I took a 
+                few days to read through it and tried to understand the flow of the code 
+                that was already written. It gave me some ideas, but the main issue I 
+                arrived at was how this was seemingly going to become slower and slower 
+                as time went on and the database filled up. The flow at the time was 
+                essentially that we could track events in the user’s storefront, store 
+                them in the database and then query all of those analytics events for the 
+                store whenever the user wanted to view analytics. Since we were using DynamoDB, 
+                which utilizes NoSQL, there wasn’t any good way to structure and query a subset 
+                of this data. As time would go on, the query would get larger and slower. 
+                <br />
+                <br />
+                &emsp;&emsp;After much thought and lots of time spent at the drawing board
+                 with my senior developer, we came to a solution. In the frontend, 
+                 we would allow users to query data for specific days, using a datepicker. 
+                 This would limit the granularity of their analytics but it would allow us
+                  to create a smart querying system. For any set of dates that the 
+                  user queried, we would check if the database already contained an 
+                  entry related to those dates. The only way this could work is if we used 
+                  very specific timestamps, in our case they would cover 24 hour blocks. Please see the diagram
+                  below as a visual representation of how these data structures would fit together. 
+            </p>
+            <picture class="rect-img-container">
+                <img srcset="media/AnalyticsDiagTwoSmall.png 700w," src="media/AnalyticsDiagTwo.png" alt="Analytics diagram">
+            </picture>
+            <p>
+                  &emsp;&emsp;If we didn’t see one, then we would create 
+                  an entry in the database which acts as a summary of all of the analytics
+                   events for that set of dates. So in the future, if the user queried this set of dates, 
+                   they wouldn’t be querying the entire set of analytics events, they would just get 
+                   back that small summary statistic almost immediately and the request would be much 
+                   faster. This sped up queries that had already been requested at some point in the 
+                   past and also limited cluttering in the database. For an idea of what this structure might 
+                   look like please see the diagram below, which I had made up for our internal documentation. 
+            </p>
+            <picture class="rect-img-container">
+                <img srcset="media/AnalyticsDiagOneSmall.png 700w," src="media/AnalyticsDiagOne.png" alt="Analytics diagram">
+            </picture>
+
+            <p>
+                &emsp;&emsp;My next issue was trying to get analytics events to fire consistently in 
+                the frontend. Specifically the issue was that I couldn’t find a way to reliably fire 
+                http requests to the backend to store the analytics event data before the page unloaded. 
+                I basically needed a request that would fire off, and didn’t particularly care about 
+                getting a response back, since the page was unloading anyways. After asking around 
+                and reading lots, I was stumped, and a little frustrated but also very determined. 
+                Until one day I stumbled across the “sendBeacon” function, which is actually purpose 
+                built for sending analytics events before the page unloads. Now I was in business and 
+                the frontend and backend were coming together nicely. Prior to this term I hadn’t worked 
+                with any backend code, or really written anything end-to-end like this. I’m super thankful 
+                to have gotten to do this because it gave me such a good understanding and appreciation for 
+                all the moving parts that go into developing an application like this. We used Koa in the 
+                backend and a bunch of other new technologies that I had never seen before and I can’t 
+                put into words how much I have learned while working at Relevant Bits. 
+                <br />
+                <br />
+                &emsp;&emsp;My final challenge was to develop a full blown test suite. Which was also 
+                something I hadn’t faced before. The plan was to use Jest for unit tests, as well 
+                as frontend snapshot tests and then write an end-to-end test using Puppeteer with 
+                headless Chromium. I realized quickly that I wanted to interact with the database 
+                during testing rather than mocking everything for every test. Great, there’s an NPM 
+                package for that. I tried it, but it wasn’t exactly what we needed. I asked my peers 
+                if it would be reasonable <a id="reflections"></a>to fork it and maintain our own version of the package, since 
+                most of what we needed was already there. After discussion, we concluded that it was an 
+                okay idea but we should try and find something else first. So, I ended up writing a script 
+                that would automate the creation and deletion of tables in our Dynalite (mock local database) 
+                instance. This allowed each test to have its own table during automated testing. This 
+                solution would scale with as many tests as we could possibly write. I was proud that I 
+                had done something like this because it was way out of my wheelhouse, it was scaleable, 
+                and it used technologies that I would’ve been anxious to use prior to this work term. 
+                From here, I finished out the analytics test suite, got it merged and continued to work on 
+                getting the app pulled together during the last three weeks of my work term.  
+            </p>
+            <!-- <picture class="rect-img-container">
+                <img srcset="media/microFeSmall.jpeg 700w," src="media/microFeLarge.jpeg" alt="microfrontends diagram">
+            </picture> -->
+        <section>
+            <h2>
+                &lt;Reflections/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;Now that you’ve read about my time at Relevant Bits, it’s time 
+                to do a little reflecting regarding my goals. As I had mentioned earlier 
+                these are just the broad goals that I had set at the start of the term and don’t 
+                fully represent the extent I went to planning and achieving other smaller goals 
+                over the course of the term. 
+                <br />
+                <br />
+                &emsp;&emsp;Regarding my first goal, which was about becoming better 
+                at talking about new ideas and solutions with my seniors. I think I 
+                achieved this goal. Initially I was quite nervous and shy despite everyone 
+                being more than friendly enough to make me feel comfortable. I think that once I 
+                became a little bit more established the pressure that I had been feeling before to 
+                perform was lifted, and I was less stressed while talking during meetings. 
+                This allowed me to have the confidence I needed to communicate my ideas fully. 
+                Another thing that I recognized was that I became more and more comfortable speaking 
+                while using very technical language to explain my ideas. Before this, I would often 
+                find myself using plain english to try and describe technical items because I would 
+                be in a bit of a panic and my brain couldn’t keep up. It felt awesome to convey my 
+                ideas in a way that other people could easily understand. 
+                <br />
+                <br />
+                &emsp;&emsp;In regard to my second goal which was about becoming more 
+                comfortable working with other people, particularly in a team setting. 
+                I also feel like I have achieved this goal. The social part of my goal was 
+                fairly easy to achieve, but that has little to do with me, and everything to do 
+                with my kind and caring peers. It was easy to get along with just about everyone 
+                and I didn’t feel nervous for very long at all. The part that was more difficult 
+                was the technical aspect, trying to read other people’s code and understand their 
+                ideas on the fly was challenging. It probably took me a good two to three weeks before 
+                I was able to easily read my peers’ code. Part of this is that everyone seems to have 
+                their own style, and it shows in the small areas of codes, like if they use ternary 
+                operators or not, or how they write their for loops. I think these things just take 
+                some time to learn and get comfortable with, but reading diverse styles of code has 
+                definitely improved my ability to quickly read and understand code in general. 
+                <br />
+                <br />
+                &emsp;&emsp; My final goal was in regards to continuing my use of creative 
+                thinking and problem solving. This goal turned out to be especially important 
+                this semester. I ended up working with a lot of new technologies this work term, 
+                and ended up revamping a lot of old code that was in the system. Because of 
+                these two factors, my options were sometimes fairly limited in how much I 
+                could change or write. Having said that, this actually made me become more 
+                creative as it put pressure on me to come up with clever solutions that worked 
+                within the constraints of the situation. Overall, I've definitely seen myself 
+                improve in this sense over the work term and would say that I have accomplished my goal. 
+                <br />
+                <br />
+                &emsp;&emsp;All in all, I’m quite pleased with what I’ve achieved this semester 
+                and hope to have equal or better success in achieving my goals during my following work terms. 
+            </p>
+        </section>
+        <section>
+            <a id="summary"></a>
+            <h2>
+                &lt;Summary/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;To conclude, I began the term in a bit of a rough way, 
+                but managed to pull through and make some valuable contributions while 
+                learning an incredible amount of new technology and skills. There’s 
+                plenty more that I could have added in here, but I think this is already a 
+                long enough read. I made lots of great memories and met some fantastic 
+                people and can’t wait to see Context go to launch and even beyond that as 
+                I continue my work part time at Relevant Bits during this coming academic 
+                semester. Finally, I’d like to give a special shout out to Bálint Kléri 
+                for being a great friend and an awesome mentor. I've learned a lot from 
+                him and without a doubt I wouldn’t have had such a successful work term 
+                without his constant confidence inspiring leadership and vast array of technical knowledge.
+            </p>
+        </section>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
